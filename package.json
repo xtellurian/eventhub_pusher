@@ -8,6 +8,7 @@
   },
   "author": "Rian Finnegan",
   "license": "MIT",
+  "repository": "https://github.com/xtellurian/eventhub_pusher",
   "dependencies": {
     "@azure/event-hubs": "^2.1.0",
     "moment": "^2.24.0"
