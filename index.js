@@ -15,7 +15,7 @@ async function main() {
   const client = EventHubClient.createFromConnectionString(connectionString, eventHubsName);
 
   while (true) {
-    let body = {_t: moment()}
+    let body = {_t: moment(), _schema: "iot_1"}
     const eventData = {body: JSON.stringify(body)};
     console.log(`Sending message: ${eventData.body}`);
     await client.send(eventData);
