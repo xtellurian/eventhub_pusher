@@ -1,0 +1,15 @@
+{
+  "name": "eventhub_pusher",
+  "version": "1.0.0",
+  "description": "Pushes data with a timestamp to event hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rian Finnegan",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/event-hubs": "^2.1.0",
+    "moment": "^2.24.0"
+  }
+}
