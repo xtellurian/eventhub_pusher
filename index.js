@@ -2,8 +2,12 @@ const { EventHubClient } = require("@azure/event-hubs");
 const moment = require("moment");
 
 // Define connection string and the name of the Event Hub
-const connectionString = process.env.CONNECTION_STRING;
-const eventHubsName = process.env.EVENT_HUB_NAME;
+// const connectionString = process.env.CONNECTION_STRING;
+// const eventHubsName = process.env.EVENT_HUB_NAME;
+
+const connectionString="Endpoint=sb://demeter-test.servicebus.windows.net/;SharedAccessKeyName=writer;SharedAccessKey=cr6ktAnEl/pdj80Pt1Lb9SnbM5MCot9uEXyY5KolUR4=;EntityPath=demeter";
+
+const eventHubsName = "demeter";
 
 function sleep(ms){
     return new Promise(resolve=>{
