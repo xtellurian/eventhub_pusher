@@ -18,18 +18,23 @@ async function main() {
   );
 
   while (true) {
-    let h = moment().hour() / 24;
+    var mmt = moment();
+    // Your moment at midnight
+    var mmtMidnight = mmt.clone().startOf("day");
+    // Difference in minutes
+    var m = mmt.diff(mmtMidnight, "minutes") / (24 * 60);
+
     const body = {
       t: moment()
         .utc()
         .format("YYYY-MM-dTHH:mm:ss"),
-      sine: Math.sin(h),
+      sine: Math.sin(m),
       s: "sine"
     };
     const eventData = { body: body };
     console.log(`Sending message: ${JSON.stringify(eventData)}`);
     await client.send(eventData);
-    await sleep(5000);
+    await sleep(24000);
   }
 
   await client.close();
